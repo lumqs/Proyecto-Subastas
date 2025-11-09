@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\SubastasForms\\SubastasForms\\SubastasForms.csproj",
+      "projectUniqueName": "F:\\Proyectos_Git\\SubastasForms\\SubastasForms\\SubastasForms.csproj",
       "projectName": "SubastasForms",
-      "projectPath": "C:\\Users\\Lucas\\Desktop\\SubastasForms\\SubastasForms\\SubastasForms.csproj",
+      "projectPath": "F:\\Proyectos_Git\\SubastasForms\\SubastasForms\\SubastasForms.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\Desktop\\SubastasForms\\SubastasForms\\obj\\",
+      "outputPath": "F:\\Proyectos_Git\\SubastasForms\\SubastasForms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

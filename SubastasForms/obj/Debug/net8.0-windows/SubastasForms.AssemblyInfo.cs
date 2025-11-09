@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubastasForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+906d40e352cda6ae2925fac6af0bf7f2e1e5d298")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubastasForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubastasForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

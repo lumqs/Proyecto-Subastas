@@ -17,7 +17,7 @@ namespace SubastasForms.Models.Entidades
 
         public Postor(Usuario usuario)
         {
-            Id = ++ContadorId;
+            id = ++ContadorId;
             this.usuario = usuario;
         }
         public List<string> Notificaciones { get { return notificaciones; } }
