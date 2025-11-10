@@ -22,5 +22,9 @@ namespace SubastasForms.Models.Entidades
         }
         public List<string> Notificaciones { get { return notificaciones; } }
         public int Id { get{ return id; } }
+        public string RetornarEmail()
+        {
+            return usuario.Email;
+        }
     }
 }
