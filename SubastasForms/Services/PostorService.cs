@@ -24,5 +24,15 @@ namespace SubastasForms.Services
         {
             return repository.Postores;
         }
+
+        public void EliminarPostor(int id)
+        {             
+            Postor postor = repository.ObtenerPorId(id);
+            if (postor == null)
+            {
+                return;
+            }
+            repository.EliminarPostor(postor);
+        }
     }
 }

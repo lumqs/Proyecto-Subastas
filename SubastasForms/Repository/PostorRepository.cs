@@ -18,9 +18,26 @@ namespace SubastasForms.Repository
 
         public List<Postor> Postores { get { return postores; } }
 
+        public Postor ObtenerPorId(int id)
+        {
+            foreach (Postor postor in postores)
+            {
+                if (postor.Id == id)
+                {
+                    return postor;
+                }
+            }
+            return null;
+        }
+
         public void AgregarPostor(Postor postor)
         {
             postores.Add(postor);
+        }
+
+        public void EliminarPostor(Postor postor)
+        {
+            postores.Remove(postor);
         }
     }
 }

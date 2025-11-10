@@ -22,12 +22,9 @@ namespace SubastasForms.Controller
             Postor postor = new Postor(usuario);
             service.AgregarPostor(postor);
         }
-
-
-        /*
-        public void EliminarPostor()
+        public void EliminarPostor(int id)
         {
-            service.EliminarPostor(this.postor.usuario.email);
-        }*/
+            service.EliminarPostor(id);
+        }
     }
 }
