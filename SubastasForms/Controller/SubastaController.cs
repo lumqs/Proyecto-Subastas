@@ -33,9 +33,6 @@ namespace SubastasForms.Controller
         {
             service.GanadorActual(p, s);
         }
-        public TimeSpan TiempoRestante(Subasta s)
-        {
-            return service.TiempoRestante(s);
-        }
+        
     }
 }
