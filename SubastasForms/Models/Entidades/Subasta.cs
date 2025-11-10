@@ -37,7 +37,7 @@ namespace SubastasForms.Models.Entidades
             PujaAumento = pujaAumento;
             FechaInicio = fechaInicio;
             DuracionTotal = duracionTotal;
-            FechaFin = FechaInicio.AddMinutes(DuracionTotal);
+            fechaFin = FechaInicio.AddMinutes(DuracionTotal);
         }
         public int Id { get { return id; } }
         public Articulo Articulo { get;}
@@ -45,7 +45,7 @@ namespace SubastasForms.Models.Entidades
         public decimal PujaInicial
         {
             get {  return pujaInicial; }
-            set
+            private set
             {
                 if (value > 100 && value <1000000)
                 {
@@ -60,7 +60,7 @@ namespace SubastasForms.Models.Entidades
         public decimal PujaAumento
         {
             get { return pujaAumento; }
-            set
+            private set
             {
                 if (value > 100 && value < 1000000)
                 {
@@ -73,7 +73,23 @@ namespace SubastasForms.Models.Entidades
             }
         }
         public List<Postor> ListaPostores { get { return listaPostores; } }
-        public DateTime FechaInicio { get;}
+        public DateTime FechaInicio 
+        {
+            get { return fechaInicio; }
+            private set
+            {
+                DateTime ahora = DateTime.Now;
+                DateTime maximoDias = ahora.AddDays(7).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+                if (value >= ahora && value < maximoDias)
+                {
+                   fechaInicio = value; 
+                }
+                else
+                {
+                    throw new ArgumentException("La fecha de inicio no puede ser una fecha pasada o con más de 7 días de anticipación.");
+                }
+            }
+        }
         public int DuracionTotal
         { 
             get { return duracionTotal; } 
@@ -89,6 +105,13 @@ namespace SubastasForms.Models.Entidades
                 }
             }
         }
-        public DateTime FechaFin { get; }
+        public DateTime FechaFin 
+        { 
+            get 
+            {
+                return fechaFin;
+            }
+        }
+
     }
 }
