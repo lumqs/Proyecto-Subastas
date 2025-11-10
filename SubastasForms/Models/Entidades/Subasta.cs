@@ -10,7 +10,7 @@ namespace SubastasForms.Models.Entidades
     public class Subasta
     {
         private static int _contadorId = 0;
-        private int id {  get; set; }
+        private int id;
         private Articulo articulo;
         private Subastador subastador;
         private decimal pujaInicial;
@@ -40,12 +40,12 @@ namespace SubastasForms.Models.Entidades
             FechaFin = FechaInicio.AddMinutes(DuracionTotal);
         }
         public int Id { get { return id; } }
-        public Articulo Articulo { get;}
-        public Subastador Subastador { get;}
+        public Articulo Articulo { get; private set; }
+        public Subastador Subastador { get; private set; }
         public decimal PujaInicial
         {
             get {  return pujaInicial; }
-            set
+            private set
             {
                 if (value > 100 && value <1000000)
                 {
@@ -60,7 +60,7 @@ namespace SubastasForms.Models.Entidades
         public decimal PujaAumento
         {
             get { return pujaAumento; }
-            set
+            private set
             {
                 if (value > 100 && value < 1000000)
                 {
@@ -73,7 +73,23 @@ namespace SubastasForms.Models.Entidades
             }
         }
         public List<Postor> ListaPostores { get { return listaPostores; } }
-        public DateTime FechaInicio { get;}
+        public DateTime FechaInicio 
+        {
+            get { return fechaInicio; }
+            private set
+            {
+                DateTime ahora = DateTime.Now;
+                DateTime maximoDias = ahora.AddDays(7).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+                if (value >= ahora && value < maximoDias)
+                {
+                   fechaInicio = value; 
+                }
+                else
+                {
+                    throw new ArgumentException("La fecha de inicio no puede ser una fecha pasada o con más de 7 días de anticipación.");
+                }
+            }
+        }
         public int DuracionTotal
         { 
             get { return duracionTotal; } 
@@ -89,6 +105,7 @@ namespace SubastasForms.Models.Entidades
                 }
             }
         }
-        public DateTime FechaFin { get; }
+        public DateTime FechaFin { get; private set; }
+
     }
 }

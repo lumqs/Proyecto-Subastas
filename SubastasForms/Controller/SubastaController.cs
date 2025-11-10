@@ -16,6 +16,12 @@ namespace SubastasForms.Controller
         {
             service = new SubastaService();
         }
+
+        public void CrearSubasta(Articulo a, Subastador s, decimal pujaInicial, decimal pujaAumento, DateTime fechaInicio, int duracionTotal)
+        {
+            Subasta subasta = new Subasta(a,s,pujaInicial,pujaAumento,fechaInicio, duracionTotal);
+        }
+
         public List<Subasta> RetornarPorSubastador(string email)
         {
             return service.RetornarPorSubastador(email);
