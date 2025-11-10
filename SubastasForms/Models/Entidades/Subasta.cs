@@ -10,7 +10,7 @@ namespace SubastasForms.Models.Entidades
     public class Subasta
     {
         private static int _contadorId = 0;
-        private int id {  get; set; }
+        private int id;
         private Articulo articulo;
         private Subastador subastador;
         private decimal pujaInicial;
@@ -37,11 +37,11 @@ namespace SubastasForms.Models.Entidades
             PujaAumento = pujaAumento;
             FechaInicio = fechaInicio;
             DuracionTotal = duracionTotal;
-            fechaFin = FechaInicio.AddMinutes(DuracionTotal);
+            FechaFin = FechaInicio.AddMinutes(DuracionTotal);
         }
         public int Id { get { return id; } }
-        public Articulo Articulo { get;}
-        public Subastador Subastador { get;}
+        public Articulo Articulo { get; private set; }
+        public Subastador Subastador { get; private set; }
         public decimal PujaInicial
         {
             get {  return pujaInicial; }
@@ -105,13 +105,7 @@ namespace SubastasForms.Models.Entidades
                 }
             }
         }
-        public DateTime FechaFin 
-        { 
-            get 
-            {
-                return fechaFin;
-            }
-        }
+        public DateTime FechaFin { get; private set; }
 
     }
 }
