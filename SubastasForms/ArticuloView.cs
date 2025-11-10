@@ -135,7 +135,7 @@ namespace SubastasForms
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();//comentario de prueba
         }
     }
 }
