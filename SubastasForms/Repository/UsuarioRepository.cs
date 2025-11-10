@@ -36,7 +36,7 @@ namespace SubastasForms.Repository
         }
         public void EliminarUsuario(Usuario usuario)
         {
-            usuarios.Remove(usuario);//comentario de pruebaaa
+            usuarios.Remove(usuario);
         }
     }
 }

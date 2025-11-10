@@ -15,7 +15,11 @@ namespace SubastasForms.Services
         {
             repository = new SubastaRepository();
         }
-        //crearSubasta
+
+        public void CrearSubasta(Subasta s)
+        {
+            repository.CrearSubasta(s);
+        }
 
         public List<Subasta> SubastasEnVivo()
         {
@@ -47,21 +51,13 @@ namespace SubastasForms.Services
             }
             return lista;
         }
-        public bool EliminarSubasta(int id)
+        public void EliminarSubasta(int id)
         {
             Subasta? s = repository.RetornarSubastaPorId(id);
             if (s != null)
             {
-                if (DateTime.Now >= s.FechaInicio && DateTime.Now <= s.FechaInicio.AddMinutes(s.DuracionTotal))
-                    return false; // está en vivo, no se puede eliminar
                 repository.EliminarSubasta(id);
-                return true;
             }
-            else
-            {
-                return false;
-            }
-
         }
         public void GanadorActual(Postor p, Subasta s)
         {
@@ -81,19 +77,3 @@ namespace SubastasForms.Services
     }
 }
 
-
-/* ejemplo para reveer
- public bool EliminarSubasta(int id)
-{
-    Subasta subasta = repository.ObtenerPorId(id);
-    if (subasta == null)
-        return false;
-
-    // Lógica de negocio opcional
-    if (subasta.EstaActiva)
-        return false;
-
-    return repository.EliminarSubasta(id);
-}
-
- */

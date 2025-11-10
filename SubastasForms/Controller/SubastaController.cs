@@ -35,7 +35,7 @@ namespace SubastasForms.Controller
         }
         public TimeSpan TiempoRestante(Subasta s)
         {
-            service.TiempoRestante(s);
+            return service.TiempoRestante(s);
         }
     }
 }

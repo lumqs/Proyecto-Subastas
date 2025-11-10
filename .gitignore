@@ -1,0 +1,17 @@
+# Archivos de compilación
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.dbmdl
+*.cache
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Archivos de configuración local
+launchSettings.json
+appsettings.Development.json
