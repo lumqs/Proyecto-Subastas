@@ -25,7 +25,6 @@ namespace SubastasForms
             this.controller = Controller;
             controller.Hardcodear();
             ActualizarComboBox();
-            //Al final ver la ruta de la imagen "default"
         }
         private void btnCrearArticulo_Click(object sender, EventArgs e)
         {
