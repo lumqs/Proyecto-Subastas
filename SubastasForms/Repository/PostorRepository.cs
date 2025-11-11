@@ -16,7 +16,10 @@ namespace SubastasForms.Repository
             postores = new List<Postor>();
         }
 
-        public List<Postor> Postores { get { return postores; } }
+        public List<Postor> ObtenerTodos()
+        {
+            return postores;
+        }
 
         public Postor ObtenerPorId(int id)
         {

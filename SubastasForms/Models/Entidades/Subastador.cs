@@ -19,27 +19,8 @@ namespace SubastasForms.Models.Entidades
             id = ++ContadorId;
             this.usuario = usuario;
         }
-        public int Id 
-        { 
-            get 
-            { 
-                return id; 
-            } 
-        }
-        public Usuario Usuario 
-        { 
-            get 
-            { 
-                return usuario; 
-            } 
-        }
-        public List<string> Notificaciones 
-        { 
-            get 
-            { 
-                return notificaciones; 
-            } 
-        }
+        public int Id { get { return id; } }
+        public List<string> Notificaciones { get { return notificaciones; } }
 
         public string RetornarEmail() 
         {

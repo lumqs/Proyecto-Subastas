@@ -17,6 +17,11 @@ namespace SubastasForms.Controller
             service = new PostorService();
         }
 
+        public List<Postor> ObtenerPostor()
+        {
+            return service.ObtenerTodos();
+        }
+
         public void AgregarPostor(Usuario usuario)
         {
             Postor postor = new Postor(usuario);

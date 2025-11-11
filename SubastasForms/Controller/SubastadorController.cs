@@ -57,5 +57,15 @@ namespace SubastasForms.Controller
             aController.CrearArticulo("Microfono", "casi nuevito", subastador);
             aController.CrearArticulo("sintetizer", "permutado por un 147", subastador);
         }
+
+        public void CrearSubastador(Usuario usuario)
+        {
+            Subastador subastador = new Subastador(usuario);
+            service.CrearSubastador(subastador);
+        }
+        public void EliminarSubastador(int id)
+        {
+            service.EliminarSubastador(id);
+        }
     }
 }
