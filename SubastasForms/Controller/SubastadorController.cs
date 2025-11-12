@@ -50,6 +50,23 @@ namespace SubastasForms.Controller
 
 
 
+
+
+        public bool CrearSubastador(Usuario usuario)
+        {
+            Subastador subastador = new Subastador(usuario); //las propiedades se encargan de crearlo correctamente
+            bool ok = service.CrearSubastador(subastador);
+            if (!ok) 
+            {
+                return false;
+                //throw new ArgumentException("El Subastador Ya existe.");
+            }
+            return true;
+        }
+        public void EliminarSubastador(int id)
+        {
+            service.EliminarSubastador(id);
+        }
         //prueba
         public void Hardcodear()
         {
@@ -57,6 +74,7 @@ namespace SubastasForms.Controller
             aController.CrearArticulo("Microfono", "casi nuevito", subastador);
             aController.CrearArticulo("sintetizer", "permutado por un 147", subastador);
         }
+<<<<<<< HEAD
 
         public List<Subastador> ObtenerSubastador()
         {
@@ -72,5 +90,7 @@ namespace SubastasForms.Controller
         {
             service.EliminarSubastador(id);
         }
+=======
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
     }
 }

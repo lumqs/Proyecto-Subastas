@@ -22,7 +22,7 @@ namespace SubastasForms.Services
         }
         public List<Postor> ObtenerTodos()
         {
-            return repository.Postores;
+            return repository.ObtenerTodos();
         }
 
         public void EliminarPostor(int id)

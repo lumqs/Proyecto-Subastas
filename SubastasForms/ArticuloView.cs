@@ -25,7 +25,6 @@ namespace SubastasForms
             this.controller = Controller;
             controller.Hardcodear();
             ActualizarComboBox();
-            //Al final ver la ruta de la imagen "default"
         }
         private void btnCrearArticulo_Click(object sender, EventArgs e)
         {
@@ -59,34 +58,42 @@ namespace SubastasForms
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)cbxArticulos.SelectedItem;
-            controller.Acontroller.ModificarArticulo
+            if (seleccionado != null) 
+            {
+                controller.Acontroller.ModificarArticulo
                 (
                     (seleccionado.Id),
                     txtNombre.Text,
                     txtDescripcion.Text,
                     controller.subastador//cambiar subastador
-                ); 
-            ActualizarComboBox();
-            MessageBox.Show
-                (
-                    "El artículo se Modificó correctamente.",
-                    "Operación exitosa",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
                 );
+                ActualizarComboBox();
+                MessageBox.Show
+                    (
+                        "El artículo se Modificó correctamente.",
+                        "Operación exitosa",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+            }
+
         }
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)cbxArticulos.SelectedItem;
-            controller.Acontroller.EliminarArticulo(seleccionado.Id);
-            ActualizarComboBox();
-            MessageBox.Show
-               (
-                    "El artículo se Eliminó correctamente.",
-                    "Operación exitosa",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-               );
+            if (seleccionado != null)
+            {
+                controller.Acontroller.EliminarArticulo(seleccionado.Id);
+                ActualizarComboBox();
+                MessageBox.Show
+                   (
+                        "El artículo se Eliminó correctamente.",
+                        "Operación exitosa",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                   );
+            }
+
         }
         private void cbxArticulos_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -102,7 +109,7 @@ namespace SubastasForms
                 if (seleccionado != null)
                 {
                     txtNombre.Text = seleccionado.Nombre;
-                    txtDescripcion.Text = seleccionado.Descripcion;  //Convert.ToString(seleccionado.Id);
+                    txtDescripcion.Text = seleccionado.Descripcion;
                 }
             }
         }
