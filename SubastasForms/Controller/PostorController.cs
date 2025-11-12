@@ -16,17 +16,20 @@ namespace SubastasForms.Controller
         {
             service = new PostorService();
         }
-        /*public bool AgregarPostor(Usuario usuario)
-        {
-            return service.CrearPostor(usuario);
-        }
+
         public List<Postor> ObtenerPostor()
         {
-            return service.ObtenerPostor();
+            return service.ObtenerTodos();
         }
-        public void EliminarPostor()
+
+        public void AgregarPostor(Usuario usuario)
         {
-            service.EliminarPostor(this.postor.usuario.email);
-        }*/
+            Postor postor = new Postor(usuario);
+            service.AgregarPostor(postor);
+        }
+        public void EliminarPostor(int id)
+        {
+            service.EliminarPostor(id);
+        }
     }
 }

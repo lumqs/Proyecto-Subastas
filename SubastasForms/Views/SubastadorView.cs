@@ -32,6 +32,10 @@ namespace SubastasForms.Views
         void btnCrearSubasta_Click(object sender, EventArgs e)
         {
            // if (controller.MostrarMisArticulos()   );
+           using (var subastaView = new SubastaForms(controller))
+            {
+                subastaView.ShowDialog();
+            }
         }
     }
 }
