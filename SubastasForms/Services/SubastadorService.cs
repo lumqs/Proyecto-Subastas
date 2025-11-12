@@ -20,6 +20,7 @@ namespace SubastasForms.Services
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         public void AgregarSubastador(Subastador subastador)
         {
             repository.AgregarSubastador(subastador);
@@ -39,6 +40,8 @@ namespace SubastasForms.Services
             repository.EliminarSubastador(subastador);
         }
 =======
+=======
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
         public bool CrearSubastador(Subastador s)
         {
             if ( repository.ObtenerPorEmail( s.RetornarEmail() ) != null)
@@ -64,6 +67,9 @@ namespace SubastasForms.Services
             repository.EliminarSubastador(email);
         }
 
+<<<<<<< HEAD
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
+=======
 >>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
     }
 }

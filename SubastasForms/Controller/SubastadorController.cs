@@ -75,6 +75,7 @@ namespace SubastasForms.Controller
             aController.CrearArticulo("sintetizer", "permutado por un 147", subastador);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         public List<Subastador> ObtenerSubastador()
         {
@@ -90,6 +91,8 @@ namespace SubastasForms.Controller
         {
             service.EliminarSubastador(id);
         }
+=======
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
 =======
 >>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
     }

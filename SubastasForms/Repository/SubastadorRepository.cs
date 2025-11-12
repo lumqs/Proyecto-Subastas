@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using SubastasForms.Models.Entidades;
+using System;
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
 =======
 ﻿using SubastasForms.Models.Entidades;
 using System;
@@ -9,7 +14,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using SubastasForms.Models.Entidades;
+=======
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
 =======
 >>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
 
@@ -17,6 +25,7 @@ namespace SubastasForms.Repository
 {
     internal class SubastadorRepository
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         private readonly List<Subastador> subastadores;
 
@@ -38,6 +47,8 @@ namespace SubastasForms.Repository
                 {
                     return subastador;
 =======
+=======
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
         private List<Subastador> subastadores;
         public SubastadorRepository() 
         { 
@@ -58,11 +69,15 @@ namespace SubastasForms.Repository
                 if (s.RetornarEmail() == email)
                 {
                     return s;
+<<<<<<< HEAD
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
+=======
 >>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
                 }
             }
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         public void AgregarSubastador(Subastador subastador)
@@ -74,6 +89,8 @@ namespace SubastasForms.Repository
         {
             subastadores.Remove(subastador);
 =======
+=======
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
         public void EliminarSubastador(string email)
         {
             Subastador? sub = ObtenerPorEmail(email);
@@ -81,6 +98,9 @@ namespace SubastasForms.Repository
             { 
                 subastadores.Remove(sub);
             }
+<<<<<<< HEAD
+>>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
+=======
 >>>>>>> 2626e29ecccad085d0ac75dfcb3370e923fbf7d3
         }
     }
