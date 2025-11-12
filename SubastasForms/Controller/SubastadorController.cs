@@ -58,6 +58,11 @@ namespace SubastasForms.Controller
             aController.CrearArticulo("sintetizer", "permutado por un 147", subastador);
         }
 
+        public List<Subastador> ObtenerSubastador()
+        {
+            return service.ObtenerTodos();
+        }
+
         public void CrearSubastador(Usuario usuario)
         {
             Subastador subastador = new Subastador(usuario);
